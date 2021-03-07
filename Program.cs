@@ -14,6 +14,7 @@ namespace nombre_magique
 
             while ((nbVies > 0))
             {
+                Console.WriteLine("");
                 Console.WriteLine("Vie restantes : " + nbVies);
                 Console.Write("Veuillez rentrer un nombre entre " + min + " et " + max + " : " );
                 string reponse = Console.ReadLine();
@@ -25,6 +26,7 @@ namespace nombre_magique
 
                     if (chiffre == magique)
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("Bravo vous avez gagné ! Le nombre magique était " + magique);
                         nbVies = 0;
                     }
@@ -52,6 +54,7 @@ namespace nombre_magique
 
                 catch
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Erreur vous devez rentrer un nombre valide");  
                 }
 
@@ -60,7 +63,8 @@ namespace nombre_magique
             // Au dernier tour nbVies sera égale à zéro, et vue que chiffre se réinitialise à chaque tours donc ils seront forcément égaux.
             if (nbVies == chiffre)
             {
-                Console.WriteLine("Vous avez perdu le nombre magique était " + magique);
+                Console.WriteLine("");
+                Console.WriteLine("Vous avez perdu le nombre magique était : " + magique);
             }
 
             return chiffre;
